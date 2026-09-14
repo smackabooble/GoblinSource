@@ -6,6 +6,7 @@ import {FormattedMessage} from 'react-intl';
 import LanguageMenu from './language-menu.jsx';
 import MenuBarMenu from './menu-bar-menu.jsx';
 import ThemeMenu from './theme-menu.jsx';
+import TweaksSection from './tweaks-menu.jsx';
 import {MenuSection} from '../menu/menu.jsx';
 
 import menuBarStyles from './menu-bar.css';
@@ -48,6 +49,9 @@ const SettingsMenu = ({
             <MenuSection>
                 {canChangeLanguage && <LanguageMenu onRequestCloseSettings={onRequestClose} />}
                 {canChangeTheme && <ThemeMenu onRequestCloseSettings={onRequestClose} />}
+            </MenuSection>
+            <MenuSection>
+                <TweaksSection onRequestCloseSettings={onRequestClose} />
             </MenuSection>
         </MenuBarMenu>
     </div>
